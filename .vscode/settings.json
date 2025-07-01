@@ -2,13 +2,19 @@
   "emmet.includeLanguages": {
     "ejs": "html"
   },
-  "[ejs]": {
-    "editor.defaultFormatter": "mohd-akram.vscode-html-format"
-  },
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 10000,
   "files.associations": {
     "*.ejs": "html"
-    
-  }
+  },
+  "[ejs]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
