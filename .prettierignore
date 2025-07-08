@@ -1,0 +1,4 @@
+app.js
+routes/campgrounds.js
+routes/reviews.js
+**/*.ejs
