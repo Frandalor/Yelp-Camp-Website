@@ -21,8 +21,6 @@ YelpCamp is a full-stack web application where users can create, view, edit, and
 ├── package.json
 └── README.md
 
----
-
 ## 🧰 Technologies Used
 
 - Node.js
