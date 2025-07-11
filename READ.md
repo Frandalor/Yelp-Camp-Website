@@ -6,7 +6,7 @@ YelpCamp is a full-stack web application where users can create, view, edit, and
 
 ## 📂 Project Structure
 
-├── cloudinary/ # Cloudinary config for image upload
+```<text>├── cloudinary/ # Cloudinary config for image upload
 ├── controllers/ # Route logic for users, campgrounds, reviews
 ├── models/ # Mongoose models
 ├── public/ # Static files (CSS, JS, images)
@@ -20,7 +20,7 @@ YelpCamp is a full-stack web application where users can create, view, edit, and
 ├── schemas.js # Joi validation schemas
 ├── package.json
 └── README.md
-
+ ```
 ## 🧰 Technologies Used
 
 - Node.js
