@@ -38,14 +38,7 @@ Custom error handling and responsive UI
 
 📸 Screenshots
 
-
-Explore available campgrounds.
-
-
-View details, reviews, and images for each campground.
-
-
-Secure authentication for managing content.
+<img width="1915" height="907" alt="image" src="https://github.com/user-attachments/assets/a7d3c8a1-3ba7-425b-96cb-25f61f47d02c" />
 
 🛠 Installation & Running Locally
 
@@ -59,21 +52,21 @@ npm install
 Set up environment variables
 
 Create a .env file in the root directory:
-
+```bash
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_KEY=your_api_key
 CLOUDINARY_SECRET=your_api_secret
-
+```
 
 (Optional) Seed the database with sample data
-
+```bash
 node seeds/index.js
-
+```
 
 Run the application
-
+```bash
 node app.js
-
+```
 🌐 Deployment
 
 The project is hosted on Render, a cloud platform for Node.js applications.
