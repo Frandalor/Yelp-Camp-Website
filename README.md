@@ -1,83 +1,83 @@
-# YelpCamp
+🌲 YelpCamp – Discover, Share & Review Campgrounds
 
-YelpCamp is a full-stack web application where users can create, view, edit, and delete campgrounds. It includes user authentication, image uploads via Cloudinary, reviews, and more. This project was developed to practice modern web development skills using Node.js, Express, MongoDB, and other technologies.
 
-⚠️ **This project is currently a work in progress**. Some features might be unfinished.
 
-## 📂 Project Structure
+YelpCamp is the final project of a full-stack web development course. It is a platform where users can explore, review, and share campgrounds. Users can create accounts, add new campgrounds, leave reviews, and manage content with a user-friendly interface.
 
-```<text>├── cloudinary/ # Cloudinary config for image upload
-├── controllers/ # Route logic for users, campgrounds, reviews
-├── models/ # Mongoose models
-├── public/ # Static files (CSS, JS, images)
-├── routes/ # Route definitions
-├── seeds/ # Database seed scripts (generate fake campgrounds)
-├── utils/ # Custom Express error classes
-├── views/ # EJS templates
-├── .env # Environment variables (excluded from Git)
-├── app.js # Main application file
-├── middleware.js # Custom middleware
-├── schemas.js # Joi validation schemas
-├── package.json
-└── README.md
- ```
-## 🧰 Technologies Used
+🔗 Live Demo: https://yelp-camp-website-pu2a.onrender.com
 
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- EJS with EJS-Mate for layouts
-- Passport.js for authentication
-- Joi for validation
-- Cloudinary & Multer for image uploads
-- Method-override, Connect-flash, Express-session
+📌 Project Highlights
 
----
+Full-Stack Development: End-to-end implementation using Node.js, Express, MongoDB, and EJS.
 
-## 🚀 Features
+Authentication & Security: Implemented secure user login, registration, and session management with Passport.js.
 
-- Register/Login/Logout
-- Password hashing and session management
-- Campground CRUD operations
-- Cloudinary image upload and storage
-- Flash messaging system
-- Joi validation for user input
-- Leave and delete reviews on campgrounds
-- Dynamic error handling
+File Management: Integrated image uploads with Cloudinary & Multer for scalable storage.
 
----
+Data Validation & Error Handling: Ensured reliable data with Joi validation and custom error handling.
 
-📸 Image Uploads
-Image uploads are handled via Cloudinary. Multer and multer-storage-cloudinary are used to connect the form submission to Cloudinary storage. You must configure your Cloudinary credentials in the .env file.
+UX & Feedback: Dynamic flash messages to improve user experience.
 
-🔒 Authentication
-Authentication is implemented using Passport.js with the passport-local and passport-local-mongoose strategies. The User model handles password hashing and salting.
+Team Project Skills: Learned project structuring, modular code design, and deployment workflows.
 
-📋 Validation
-Input validation is handled with Joi on the server side for both campground and review creation. Error messages are caught and rendered using a custom ExpressError class.
+🚀 Features
 
-## 🛠 Installation
+User registration, login, and logout with secure sessions
 
-### 1. Clone the Repository and install Dependencies
+CRUD operations for campgrounds
 
-```bash
+Cloudinary image uploads for campground images
+
+Add and delete campground reviews
+
+Flash messages for feedback on actions
+
+Server-side input validation with Joi
+
+Custom error handling and responsive UI
+
+📸 Screenshots
+
+
+Explore available campgrounds.
+
+
+View details, reviews, and images for each campground.
+
+
+Secure authentication for managing content.
+
+🛠 Installation & Running Locally
+
+Clone the repository and install dependencies
+
 git clone https://github.com/Frandalor/Yelp-Camp-Website
 cd Yelp-Camp-Website
-nmp install
-```
+npm install
 
-### 2. Set Up Environment Variables:
 
-Create a .env file in the root with the following content:
+Set up environment variables
+
+Create a .env file in the root directory:
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_KEY=your_api_key
 CLOUDINARY_SECRET=your_api_secret
 
-### 3. Seed the Database (Optional)
 
-`node seeds/index.js`
+(Optional) Seed the database with sample data
 
-### 4. Run the Application
+node seeds/index.js
 
-`node app.js`
+
+Run the application
+
+node app.js
+
+🌐 Deployment
+
+The project is hosted on Render, a cloud platform for Node.js applications.
+
+🔗 Live Demo: https://yelp-camp-website-pu2a.onrender.com
+
+Free Render plans may take a few seconds to wake up after inactivity.
