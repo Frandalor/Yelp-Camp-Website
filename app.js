@@ -16,11 +16,15 @@ const User = require('./models/user');
 const sanitizeV5 = require('./utils/mongoSanitizeV5');
 const helmet = require('helmet');
 
+const MongoDBStore = require('connect-mongo');
+
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
+const dbUrl = process.env.DB_URL;
+// const dbUrl = 'mongodb://localhost:27017/yelp-camp';
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp');
+mongoose.connect(dbUrl);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
@@ -39,7 +43,22 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(sanitizeV5({ replaceWith: '_' }));
 
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+
+const store = MongoDBStore.create({
+  mongoUrl: dbUrl,
+  touchAfter: 24 * 60 * 60,
+  crypto: {
+    secret: secret,
+  },
+});
+
+store.on('error', function (e) {
+  console.log('SESSION STORE ERROR', e);
+});
+
 const sessionConfig = {
+  store,
   name: 'session',
   secret: 'thisshouldbeabettersecret',
   resave: false,
@@ -51,6 +70,7 @@ const sessionConfig = {
     maxAge: 1000 * 60 * 60 * 24 * 7,
   },
 };
+
 app.use(session(sessionConfig));
 app.use(flash());
 app.use(helmet());
